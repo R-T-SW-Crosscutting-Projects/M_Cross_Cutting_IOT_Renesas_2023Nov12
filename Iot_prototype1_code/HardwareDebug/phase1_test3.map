@@ -1,0 +1,80 @@
+Renesas Optimizing Linker (W3.04.00 )             23-Nov-2023 10:46:15
+
+*** Options ***
+
+-subcommand=Linkerphase1_test3.tmp
+-MAKEUD=C:\Users\amoham223\e2workspace\phase1_test3\HardwareDebug/phase1_test3_l.ud
+-device="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"
+-list="phase1_test3.map"
+-nooptimize
+-entry=_start
+-auto_section_layout
+-security_id=0
+-debug_monitor=07E00-07FFF
+-user_opt_byte=00FFF8
+-ocdbg=84
+-input=".\generate\cstart.obj"
+-input=".\generate\hdwinit.obj"
+-input=".\generate\stkinit.obj"
+-input=".\src/HAL/IOT\iot.obj"
+-input=".\src/HAL/PB\Component_PB.obj"
+-input=".\src/HAL/SSD\Component_SSD.obj"
+-input=".\src/MCAL/GPIO\MCAL_R5F11BBC_GPIO.obj"
+-input=".\src/MCAL/INTERVALTIMER\Interval_Timer.obj"
+-input=".\src/MCAL\MCAL_R5F11BBC_Config.obj"
+-input=".\src/MCAL/UART\MCAL_R5F11BBC_UART.obj"
+-input=".\src/MIDDLEWARE\Middleware.obj"
+-input=".\src/OS\tt_scheduler.obj"
+-input=".\src\phase1_test3.obj"
+-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4s99.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4r.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\malloc_n.lib"
+-output="phase1_test3.abs"
+-debug
+-nocompress
+-memory=high
+-rom=.data=.dataR,.sdata=.sdataR
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+.vect
+                                  00000000  0000007f        80   0
+.constf
+                                  00000080  00000080         0   2
+.sdata
+                                  00000080  00000080         0   2
+.data
+                                  00000082  000000a5        24   2
+.option_byte
+                                  000000c0  000000c3         4   1
+.security_id
+                                  000000c4  000000cd         a   1
+.RLIB
+                                  000000c4  000000c4         0   1
+.SLIB
+                                  000000c4  000000c4         0   1
+.monitor1
+                                  000000ce  000000d7         a   1
+.text
+                                  000000d8  000001fd       126   1
+.textf
+                                  000001fe  00001d8b      1b8e   1
+.const
+                                  00002000  00002000         0   2
+.monitor2
+                                  00007e00  00007fff       200   1
+.bss
+                                  000fe900  000fec17       318   2
+.dataR
+                                  000fec18  000fec3b        24   2
+.init
+                                  000fec3c  000fec3c         0   1
+.sbss
+                                  000ffe20  000ffe20         0   2
+.sdataR
+                                  000ffe20  000ffe20         0   2

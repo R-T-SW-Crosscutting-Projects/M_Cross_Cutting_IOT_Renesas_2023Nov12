@@ -1,0 +1,6 @@
+-cpu=S3
+-c
+-dev="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"
+-MAKEUD="C:\Users\amoham223\e2workspace\phase1_test3\HardwareDebug\generate"
+-character_set=utf8
+-g

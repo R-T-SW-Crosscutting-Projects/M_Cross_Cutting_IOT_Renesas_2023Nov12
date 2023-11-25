@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MicomToolCommonProjectFile Version="1.00">
+  <CreatorType Name="e2studio" Version=""/>
+  <Placeholders>
+    <PlaceholderPrefix>${</PlaceholderPrefix>
+    <PlaceholderPostfix>}</PlaceholderPostfix>
+  </Placeholders>
+  <Project Name="phase1_test3" Type="Application">
+    <Files>
+      <Category Name="generate">
+        <Path>generate\cstart.asm</Path>
+        <Path>generate\hdwinit.asm</Path>
+        <Path>generate\iodefine.h</Path>
+        <Path>generate\stkinit.asm</Path>
+      </Category>
+      <Category Name="src">
+        <Path>src\phase1_test3.c</Path>
+        <Category Name="HAL">
+          <Category Name="IOT">
+            <Path>src\HAL\IOT\iot.c</Path>
+            <Path>src\HAL\IOT\iot.h</Path>
+            <Path>src\HAL\IOT\iot_user.h</Path>
+          </Category>
+          <Category Name="PB">
+            <Path>src\HAL\PB\Component_PB.c</Path>
+            <Path>src\HAL\PB\Component_PB.h</Path>
+            <Path>src\HAL\PB\Component_PB_Config.h</Path>
+          </Category>
+          <Category Name="SSD">
+            <Path>src\HAL\SSD\Component_SSD.c</Path>
+            <Path>src\HAL\SSD\Component_SSD.h</Path>
+            <Path>src\HAL\SSD\Component_SSD_Config.h</Path>
+          </Category>
+        </Category>
+        <Category Name="MCAL">
+          <Path>src\MCAL\MCAL_General_Config.h</Path>
+          <Path>src\MCAL\MCAL_R5F11BBC_Config.c</Path>
+          <Path>src\MCAL\MCAL_R5F11BBC_Config.h</Path>
+          <Path>src\MCAL\MCAL_R5F11BBC_MAIN.h</Path>
+          <Path>src\MCAL\MCAL_USER.h</Path>
+          <Category Name="GPIO">
+            <Path>src\MCAL\GPIO\MCAL_R5F11BBC_GPIO.c</Path>
+            <Path>src\MCAL\GPIO\MCAL_R5F11BBC_GPIO.h</Path>
+          </Category>
+          <Category Name="INTERVALTIMER">
+            <Path>src\MCAL\INTERVALTIMER\Interval_Timer.c</Path>
+            <Path>src\MCAL\INTERVALTIMER\Interval_Timer.h</Path>
+          </Category>
+          <Category Name="UART">
+            <Path>src\MCAL\UART\MCAL_R5F11BBC_UART.c</Path>
+            <Path>src\MCAL\UART\MCAL_R5F11BBC_UART.h</Path>
+          </Category>
+        </Category>
+        <Category Name="MIDDLEWARE">
+          <Path>src\MIDDLEWARE\Middleware.c</Path>
+          <Path>src\MIDDLEWARE\Middleware.h</Path>
+          <Path>src\MIDDLEWARE\Middleware_user.h</Path>
+        </Category>
+        <Category Name="OS">
+          <Path>src\OS\tt_scheduler.c</Path>
+          <Path>src\OS\tt_scheduler.h</Path>
+        </Category>
+      </Category>
+    </Files>
+    <Device Category="com.renesas.cdt.managedbuild.renesas.ccrl.common.option.cpu.s3" Series="RL78">R5F11BBC</Device>
+    <BuildOptions Name="CC-RL" Version="v1.11.00">
+      <BuildMode Active="True" Name="HardwareDebug">
+        <GeneralOptions/>
+        <CompileOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-I "${ProjDirPath}\generate"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o ${workspace_loc}\${ProjName}/${ConfigName}</Option>
+          <Option>-lang=c99</Option>
+          <Option>-lang=cpp14</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o "${ProjDirPath}/../${ProjName}/${ConfigName}"</Option>
+        </AssembleOptions>
+        <LinkOptions>
+          <Option>-device="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-list=${ProjName}.map</Option>
+          <Option>-nooptimize</Option>
+          <Option>-entry=_start</Option>
+          <Option>-auto_section_layout</Option>
+          <Option>-security_id=0</Option>
+          <Option>-debug_monitor=07E00-07FFF</Option>
+          <Option>-user_opt_byte=00FFF8</Option>
+          <Option>-ocdbg=84</Option>
+          <Option>-output="${ProjName}.abs"</Option>
+          <Option>-debug</Option>
+          <Option>-nocompress</Option>
+          <Option>-memory=high</Option>
+          <Option>-rom=.data=.dataR,.sdata=.sdataR</Option>
+          <Option>-nomessage</Option>
+          <Option>-nologo</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4s99.lib"</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4r.lib"</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>HardwareDebug\cstart.obj</Path>
+          <Path>HardwareDebug\hdwinit.obj</Path>
+          <Path>HardwareDebug\stkinit.obj</Path>
+          <Path>HardwareDebug\iot.obj</Path>
+          <Path>HardwareDebug\Component_PB.obj</Path>
+          <Path>HardwareDebug\Component_SSD.obj</Path>
+          <Path>HardwareDebug\MCAL_R5F11BBC_GPIO.obj</Path>
+          <Path>HardwareDebug\Interval_Timer.obj</Path>
+          <Path>HardwareDebug\MCAL_R5F11BBC_Config.obj</Path>
+          <Path>HardwareDebug\MCAL_R5F11BBC_UART.obj</Path>
+          <Path>HardwareDebug\Middleware.obj</Path>
+          <Path>HardwareDebug\tt_scheduler.obj</Path>
+          <Path>HardwareDebug\phase1_test3.obj</Path>
+        </LinkOrder>
+        <CommonOptions>
+          <IncludePathForC>"${ProjDirPath}\generate"</IncludePathForC>
+        </CommonOptions>
+      </BuildMode>
+      <BuildMode Active="False" Name="Debug">
+        <GeneralOptions/>
+        <CompileOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-I "${ProjDirPath}\generate"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o ${workspace_loc}\${ProjName}/${ConfigName}</Option>
+          <Option>-lang=c</Option>
+          <Option>-lang=cpp14</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-g</Option>
+          <Option>-o "${ProjDirPath}/../${ProjName}/${ConfigName}"</Option>
+        </AssembleOptions>
+        <LinkOptions>
+          <Option>-device="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-list=${ProjName}.map</Option>
+          <Option>-nooptimize</Option>
+          <Option>-auto_section_layout</Option>
+          <Option>-security_id=0</Option>
+          <Option>-output="${ProjName}.abs"</Option>
+          <Option>-debug</Option>
+          <Option>-nocompress</Option>
+          <Option>-memory=high</Option>
+          <Option>-rom=.data=.dataR,.sdata=.sdataR</Option>
+          <Option>-nomessage</Option>
+          <Option>-nologo</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4s.lib"</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4r.lib"</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>Debug\cstart.obj</Path>
+          <Path>Debug\hdwinit.obj</Path>
+          <Path>Debug\stkinit.obj</Path>
+          <Path>Debug\iot.obj</Path>
+          <Path>Debug\Component_PB.obj</Path>
+          <Path>Debug\Component_SSD.obj</Path>
+          <Path>Debug\MCAL_R5F11BBC_GPIO.obj</Path>
+          <Path>Debug\Interval_Timer.obj</Path>
+          <Path>Debug\MCAL_R5F11BBC_Config.obj</Path>
+          <Path>Debug\MCAL_R5F11BBC_UART.obj</Path>
+          <Path>Debug\Middleware.obj</Path>
+          <Path>Debug\tt_scheduler.obj</Path>
+          <Path>Debug\phase1_test3.obj</Path>
+        </LinkOrder>
+        <CommonOptions>
+          <IncludePathForC>"${ProjDirPath}\generate"</IncludePathForC>
+        </CommonOptions>
+      </BuildMode>
+      <BuildMode Active="False" Name="Release">
+        <GeneralOptions/>
+        <CompileOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-I "${ProjDirPath}\generate"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-o ${workspace_loc}\${ProjName}/${ConfigName}</Option>
+          <Option>-lang=c</Option>
+          <Option>-lang=cpp14</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-cpu=S3</Option>
+          <Option>-c</Option>
+          <Option>-dev="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-character_set=utf8</Option>
+          <Option>-o "${ProjDirPath}/../${ProjName}/${ConfigName}"</Option>
+        </AssembleOptions>
+        <LinkOptions>
+          <Option>-device="C:/Users/amoham223/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"</Option>
+          <Option>-list=${ProjName}.map</Option>
+          <Option>-nooptimize</Option>
+          <Option>-auto_section_layout</Option>
+          <Option>-security_id=0</Option>
+          <Option>-output="${ProjName}.abs"</Option>
+          <Option>-nodebug</Option>
+          <Option>-memory=high</Option>
+          <Option>-rom=.data=.dataR,.sdata=.sdataR</Option>
+          <Option>-nomessage</Option>
+          <Option>-nologo</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4s.lib"</Option>
+          <Option>-library="C:\Program Files (x86)\Renesas\RL78\1_11_0\lib\rl78em4r.lib"</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>Release\cstart.obj</Path>
+          <Path>Release\hdwinit.obj</Path>
+          <Path>Release\stkinit.obj</Path>
+          <Path>Release\iot.obj</Path>
+          <Path>Release\Component_PB.obj</Path>
+          <Path>Release\Component_SSD.obj</Path>
+          <Path>Release\MCAL_R5F11BBC_GPIO.obj</Path>
+          <Path>Release\Interval_Timer.obj</Path>
+          <Path>Release\MCAL_R5F11BBC_Config.obj</Path>
+          <Path>Release\MCAL_R5F11BBC_UART.obj</Path>
+          <Path>Release\Middleware.obj</Path>
+          <Path>Release\tt_scheduler.obj</Path>
+          <Path>Release\phase1_test3.obj</Path>
+        </LinkOrder>
+        <CommonOptions>
+          <IncludePathForC>"${ProjDirPath}\generate"</IncludePathForC>
+        </CommonOptions>
+      </BuildMode>
+    </BuildOptions>
+  </Project>
+</MicomToolCommonProjectFile>
