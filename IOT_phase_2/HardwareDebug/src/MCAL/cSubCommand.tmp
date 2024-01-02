@@ -1,0 +1,9 @@
+-cpu=S3
+-c
+-dev="D:/ELARABY/e2_Work_Space/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"
+-MAKEUD="D:\ELARABY\e2_Work_Space\IOT_phase_2\HardwareDebug\src\MCAL"
+-I "D:/ELARABY/e2_Work_Space/IOT_phase_2/generate" 
+-character_set=utf8
+-lang=c99
+-g
+-Odefault 
