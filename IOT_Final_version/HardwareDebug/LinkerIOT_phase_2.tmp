@@ -1,0 +1,33 @@
+-MAKEUD=D:\ELARABY\e2_Work_Space\IOT_phase_2\HardwareDebug/IOT_phase_2_l.ud
+-device="D:/ELARABY/e2_Work_Space/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"
+-list="IOT_phase_2.map"
+-nooptimize
+-entry=_start
+-auto_section_layout
+-security_id=0
+-debug_monitor=07E00-07FFF
+-user_opt_byte=00FFF8
+-ocdbg=84
+-input=".\generate\cstart.obj"
+-input=".\generate\hdwinit.obj"
+-input=".\generate\stkinit.obj"
+-input=".\src/HAL/IOT\iot.obj"
+-input=".\src/HAL/PB\Component_PB.obj"
+-input=".\src/HAL/SSD\Component_SSD.obj"
+-input=".\src\IOT_phase_2.obj"
+-input=".\src/MCAL/GPIO\MCAL_R5F11BBC_GPIO.obj"
+-input=".\src/MCAL/INTERVALTIMER\Interval_Timer.obj"
+-input=".\src/MCAL\MCAL_R5F11BBC_Config.obj"
+-input=".\src/MCAL/UART\MCAL_R5F11BBC_UART.obj"
+-input=".\src/MIDDLEWARE\Middleware.obj"
+-input=".\src/OS\tt_scheduler.obj"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_0\lib\rl78em4s99.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_0\lib\rl78em4r.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_0\lib\malloc_n.lib"
+-output="IOT_phase_2.abs"
+-debug
+-nocompress
+-memory=high
+-rom=.data=.dataR,.sdata=.sdataR
+-nomessage
+-nologo

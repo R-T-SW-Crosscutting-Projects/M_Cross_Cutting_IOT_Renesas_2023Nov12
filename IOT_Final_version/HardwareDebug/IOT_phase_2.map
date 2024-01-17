@@ -1,0 +1,80 @@
+Renesas Optimizing Linker (W3.05.00 )             17-Jan-2024 11:21:34
+
+*** Options ***
+
+-subcommand=LinkerIOT_phase_2.tmp
+-MAKEUD=D:\ELARABY\e2_Work_Space\IOT_phase_2\HardwareDebug/IOT_phase_2_l.ud
+-device="D:/ELARABY/e2_Work_Space/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F11BBC.DVF"
+-list="IOT_phase_2.map"
+-nooptimize
+-entry=_start
+-auto_section_layout
+-security_id=0
+-debug_monitor=07E00-07FFF
+-user_opt_byte=00FFF8
+-ocdbg=84
+-input=".\generate\cstart.obj"
+-input=".\generate\hdwinit.obj"
+-input=".\generate\stkinit.obj"
+-input=".\src/HAL/IOT\iot.obj"
+-input=".\src/HAL/PB\Component_PB.obj"
+-input=".\src/HAL/SSD\Component_SSD.obj"
+-input=".\src\IOT_phase_2.obj"
+-input=".\src/MCAL/GPIO\MCAL_R5F11BBC_GPIO.obj"
+-input=".\src/MCAL/INTERVALTIMER\Interval_Timer.obj"
+-input=".\src/MCAL\MCAL_R5F11BBC_Config.obj"
+-input=".\src/MCAL/UART\MCAL_R5F11BBC_UART.obj"
+-input=".\src/MIDDLEWARE\Middleware.obj"
+-input=".\src/OS\tt_scheduler.obj"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_0\lib\rl78em4s99.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_0\lib\rl78em4r.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_0\lib\malloc_n.lib"
+-output="IOT_phase_2.abs"
+-debug
+-nocompress
+-memory=high
+-rom=.data=.dataR,.sdata=.sdataR
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+.vect
+                                  00000000  0000007f        80   0
+.init_array
+                                  00000080  00000080         0   2
+.sdata
+                                  00000080  00000080         0   2
+.option_byte
+                                  000000c0  000000c3         4   1
+.security_id
+                                  000000c4  000000cd         a   1
+.monitor1
+                                  000000ce  000000d7         a   1
+.constf
+                                  000000d8  0000013b        64   2
+.data
+                                  0000013c  0000019f        64   2
+.text
+                                  000001a0  000002c7       128   1
+.RLIB
+                                  000002c8  000007e0       519   1
+.SLIB
+                                  000007e1  00000e70       690   1
+.const
+                                  00002000  0000200b         c   2
+.textf
+                                  0000200c  0000452f      2524   1
+.monitor2
+                                  00007e00  00007fff       200   1
+.bss
+                                  000fe900  000feb4f       250   2
+.dataR
+                                  000feb50  000febb3        64   2
+.sbss
+                                  000ffe20  000ffe20         0   2
+.sdataR
+                                  000ffe20  000ffe20         0   2
